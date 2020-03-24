@@ -16,7 +16,13 @@ import com.example.minilogin.util.DButil;
 public class ProductInfoDaoImpl implements ProductInfoDao{
 	static List<ProductInfo> list1=new ArrayList();
 	static List<ProductInfo> list2=new ArrayList();
+	static List<ProductInfo> list3=new ArrayList();
+	static List<ProductInfo> list4=new ArrayList();
+	static List<ProductInfo> list5=new ArrayList();
+	
+
 	Connection connection;
+	
 	
 	public ProductInfoDaoImpl() {
 		connection = DButil.getConnection();
@@ -110,5 +116,239 @@ public class ProductInfoDaoImpl implements ProductInfoDao{
 			}catch(Exception e) {}
 		return list2;
 	}
+	public List<ProductInfo> viewAllProducts0( ){
 
-}
+		try {
+			list2.clear();
+	        System.out.println("Inside try");
+			PreparedStatement stmt0 = connection.prepareStatement("select * from product_info where category_type=0");
+			ResultSet rs = stmt0.executeQuery();
+			while (rs.next()) {
+			ProductInfo prod=new ProductInfo();
+			System.out.println("Inside while");
+			prod.setProduct_id(rs.getString("product_id"));
+			prod.setCategory_type(rs.getInt("category_type"));
+			prod.setCreate_time(rs.getDate("create_time"));
+			prod.setProduct_description(rs.getString("product_description"));
+			prod.setProduct_icon(rs.getString("product_icon"));
+			prod.setProduct_name(rs.getString("product_name"));
+			prod.setProduct_price(rs.getFloat("product_price"));
+			prod.setProduct_status(rs.getInt("product_status"));
+			prod.setProduct_stock(rs.getInt("product_stock"));
+			prod.setUpdate_time(rs.getDate("update_time"));
+			System.out.println("Inside while-2");
+			list2.add(prod);
+			System.out.println(list2);
+		}
+		}catch(Exception e) {}
+	return list2;
+	}
+		public List<ProductInfo> viewAllProducts11( ){
+
+			try {
+
+				list3.clear();
+		        
+		        System.out.println("Inside try");
+
+				PreparedStatement stmt1 = connection.prepareStatement("select * from product_info where category_type=1");
+
+			
+			
+			
+			ResultSet rs = stmt1.executeQuery();
+
+			while (rs.next()) {
+
+				ProductInfo prod=new ProductInfo();
+
+				System.out.println("Inside while");
+
+				prod.setProduct_id(rs.getString("product_id"));
+
+				prod.setCategory_type(rs.getInt("category_type"));
+
+				prod.setCreate_time(rs.getDate("create_time"));
+
+				prod.setProduct_description(rs.getString("product_description"));
+
+
+
+				prod.setProduct_icon(rs.getString("product_icon"));
+
+				prod.setProduct_name(rs.getString("product_name"));
+
+				prod.setProduct_price(rs.getFloat("product_price"));
+
+				prod.setProduct_status(rs.getInt("product_status"));
+
+				prod.setProduct_stock(rs.getInt("product_stock"));
+
+				prod.setUpdate_time(rs.getDate("update_time"));
+
+
+
+				
+
+
+
+
+
+				System.out.println("Inside while-2");
+
+				list3.add(prod);
+
+				System.out.println(list3);
+
+				
+
+			}
+
+			}catch(Exception e) {}
+
+		return list3;
+
+		}
+		
+		public List<ProductInfo> viewAllProducts2( ){
+
+			try {
+
+				list4.clear();
+		        
+		        System.out.println("Inside try");
+
+				PreparedStatement stmt2 = connection.prepareStatement("select * from product_info where category_type=2");
+
+			
+			
+			
+			ResultSet rs = stmt2.executeQuery();
+
+			while (rs.next()) {
+
+				ProductInfo prod=new ProductInfo();
+
+				System.out.println("Inside while");
+
+				prod.setProduct_id(rs.getString("product_id"));
+
+				prod.setCategory_type(rs.getInt("category_type"));
+
+				prod.setCreate_time(rs.getDate("create_time"));
+
+				prod.setProduct_description(rs.getString("product_description"));
+
+
+
+				prod.setProduct_icon(rs.getString("product_icon"));
+
+				prod.setProduct_name(rs.getString("product_name"));
+
+				prod.setProduct_price(rs.getFloat("product_price"));
+
+				prod.setProduct_status(rs.getInt("product_status"));
+
+				prod.setProduct_stock(rs.getInt("product_stock"));
+
+				prod.setUpdate_time(rs.getDate("update_time"));
+
+
+
+				
+
+
+
+
+
+				System.out.println("Inside while-2");
+
+				list4.add(prod);
+
+				System.out.println(list4);
+
+				
+
+			}
+
+			}catch(Exception e) {}
+
+		return list4;
+
+		}
+		
+		
+		
+		public List<ProductInfo> viewAllProducts3(){
+
+			try {
+
+				list5.clear();
+		        
+		        System.out.println("Inside try");
+
+				PreparedStatement stmt3 = connection.prepareStatement("select * from product_info where category_type=3");
+
+			
+			
+			
+			ResultSet rs = stmt3.executeQuery();
+
+			while (rs.next()) {
+
+				ProductInfo prod=new ProductInfo();
+
+				System.out.println("Inside while");
+
+				prod.setProduct_id(rs.getString("product_id"));
+
+				prod.setCategory_type(rs.getInt("category_type"));
+
+				prod.setCreate_time(rs.getDate("create_time"));
+
+				prod.setProduct_description(rs.getString("product_description"));
+
+
+
+				prod.setProduct_icon(rs.getString("product_icon"));
+
+				prod.setProduct_name(rs.getString("product_name"));
+
+				prod.setProduct_price(rs.getFloat("product_price"));
+
+				prod.setProduct_status(rs.getInt("product_status"));
+
+				prod.setProduct_stock(rs.getInt("product_stock"));
+
+				prod.setUpdate_time(rs.getDate("update_time"));
+
+
+
+				
+
+
+
+
+
+				System.out.println("Inside while-2");
+
+				list5.add(prod);
+
+				System.out.println(list5);
+
+				
+
+			}
+
+			}catch(Exception e) {}
+
+		return list5;
+
+		}
+		
+		
+
+		
+		
+	}
+

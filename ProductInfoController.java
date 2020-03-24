@@ -32,6 +32,37 @@ public class ProductInfoController {
 		System.out.println("xgfhjbkl");
 		return productInfo.viewAllProducts1(id);
 	}
+	@GetMapping("/products1")
+	public List getProducts1() {	
+	return productInfo.viewAllProducts0();
+}
 
 	
+	@GetMapping("/products2")
+
+	public List getProducts2() {	
+
+	return productInfo.viewAllProducts11();
 }
+
+		//clothes(2)
+	@GetMapping("/products3")
+
+	public List getProducts3() {	
+
+	return productInfo.viewAllProducts2();
+	
+	
+}
+	//drinks(3)
+	@GetMapping("/products4")
+
+	public List getProducts4() {	
+
+	return productInfo.viewAllProducts3();
+	
+	
+}
+	
+}
+	
