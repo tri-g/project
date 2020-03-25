@@ -1,0 +1,48 @@
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<br>
+<h2 style="text-align:center;">Your Cart</h2>
+<hr/>
+<div>
+<div>
+	<table>
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td><img src="{{img}}"  style="width: 50px;height: 50px" text-align="center"/></td>
+			<td>{{id}}</td>
+			<td>{{name}}</td>
+			<td>{{desc}}</td>
+			<td>{{price}}</td>
+		</tr>
+	</table>
+</div>
+<br>
+<br>
+
+
+<button class="btn btn-danger" (click)="buy()">Pay Now</button>
+&nbsp;&nbsp;
+<button (click)="list()" class="btn btn-primary">Back to Product List</button><br>
